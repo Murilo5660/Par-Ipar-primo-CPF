@@ -8,7 +8,7 @@ def par_ou_impar():
         print(f"O número {num} é Ímpar")
 
 
-def primo():
+def primo(): 
     numero = int(input("Digite um número para sabe se ele é Primo ou Não: "))
     if numero <= 1:
         print(f"O número {numero} não é Primo")
@@ -29,16 +29,19 @@ def primo():
 
 def validar_cpf():
     cpf = input("Digite seu CPF para saber se ele é Válido ou Inválido: ")
-
+#verifica se cpf possui 11 dígitos e se esses 11 dígitos são iguais
     if len(cpf) != 11 or cpf == cpf[0] * 11:
         print("CPF Inválido")
         return
 
     def calcular_digito(cpf, peso_inicial):
+        #Multiplica os dígitos iniciais por pesos decrescentes (10 → 2 e depois 11 → 2)
         soma = sum(int(dig) * peso for dig, peso in zip(cpf, range(peso_inicial, 1, -1)))
+        #Faz a soma, multiplica por 10 e tira o resto da divisão por 1
         resto = (soma * 10) % 11
+        #Se o resto for 10, considera como 0
         return 0 if resto == 10 else resto
-
+#compara os dois dígitos calculados com os dois últimos do CPF informado
     digito1 = calcular_digito(cpf[:9], 10)
     digito2 = calcular_digito(cpf[:10], 11)
 
