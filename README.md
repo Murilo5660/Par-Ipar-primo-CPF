@@ -41,7 +41,3 @@ Praticar o uso de **threads em Python**, permitindo que várias funções rodem 
 
 1. Entender o funcionamento de *threads* simultâneas e como cada função pode rodar ao mesmo tempo.
 2. Tratar a entrada do usuário quando várias *threads* pedem dados simultaneamente (pode causar confusão no console).
-
----
-
-Quer que eu adicione uma seção **"Resultado esperado"** (mostrando o que aparece no terminal quando o código roda)? Isso deixaria sua documentação mais completa.
